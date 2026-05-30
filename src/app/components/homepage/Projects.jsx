@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import projectOne from "@/app/assets/projectOne.png";
+import projectTwo from "@/app/assets/skill-sphere-project.png";
+import projectThree from "@/app/assets/keenkeeper-project.png";
+import projectFour from "@/app/assets/docAppointMent-project.png";
+import projectFive from "@/app/assets/digiTools-project.png";
 import { IoArrowForward } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
@@ -18,12 +22,39 @@ const projectData = [
   },
   {
     id: 2,
-    image: projectOne,
-    technologies: ["Next.Js", "MongoDB", "Tailwind CSS"],
-    project_Name: "Hire Loop",
-    description: "KeenKeeper is a modern web application designed to help users maintain meaningful connections with their friends and family.",
-    liveUrl: "https://project2.com",
-    githubUrl: "https://github.com/foysal/project2",
+    image: projectTwo,
+    technologies: [ "MongoDB", "Better Auth", "Toastify" , "(ES6+)"],
+    project_Name: "SkillSphere – Online Learning Platform",
+    description: "A secure online learning platform featuring authentication, course browsing, protected lessons, profile management, and dynamic course search functionality.",
+    liveUrl: "https://b13-a8-skill-sphere-theta.vercel.app/",
+    githubUrl: "https://github.com/foysal41/B13-A8-Skill-Sphere",
+  },
+   {
+    id: 3,
+    image: projectThree,
+    technologies: ["React.js", "DaisyUI", "Tailwind CSS", "Context API", "Recharts"],
+    project_Name: "Keen Keeper – Friend Connection Platform",
+    description: "Interactive friend management platform enabling users to explore profiles, track activities, and manage communications through global state.",
+    liveUrl: "https://b13-a7-keen-keeper-puce.vercel.app/",
+    githubUrl: "https://github.com/foysal41/B13-A7-keen-keeper",
+  },
+   {
+    id: 4,
+    image: projectFour,
+    technologies: ["Next.Js", "MongoDB", "JWT", "Better Auth"],
+    project_Name: "Doc Appoint – Doctor Appointment Booking Platform",
+    description: "Full-stack healthcare platform enabling secure doctor discovery, appointment booking, authentication, dashboard management, and personalized booking tracking.",
+    liveUrl: "https://docappoint-murex.vercel.app/",
+    githubUrl: "https://github.com/foysal41/docappoint",
+  },
+    {
+    id: 5,
+    image: projectFive,
+    technologies: ["React.js,", "ES6+", "Toastify"],
+    project_Name: "DigiTools – Digital Tools Marketplace",
+    description: "Responsive digital marketplace for discovering productivity tools, managing purchases, and enhancing workflow through interactive shopping experiences.",
+    liveUrl: "https://b13-a6-digi-tools-platform-ten.vercel.app/",
+    githubUrl: "https://github.com/foysal41/B13-A6-DigiTools-Platform",
   },
 ];
 
@@ -42,7 +73,7 @@ export default function Projects() {
               <Image src={project.image} alt="project_one"></Image>
             </div>
 
-            <div className="flex flex-row gap-3 justify-center items-center my-3 ">
+            <div className="flex flex-wrap  gap-3 justify-center items-center my-3 ">
               {project.technologies.map((technologie, idx) => (
                 <span
                   key={idx}

@@ -14,13 +14,14 @@ export default function Hero() {
           <div className='text-center z-100 space-y-4 md:space-y-8'> 
             <Image src={heroImage} alt='foysal jaman' className='h-30 w-30 rounded-full mx-auto border-3 border-b-purple-500 border-r-purple-500  border-l-purple-500 '></Image>
             <p className='text-2xl font-normal'>Hi! Im Foysal Jaman</p>
-            <h1 className='text-3xl md:text-5xl font-bold ' >Front-End Web Developer</h1>
+            <h1 className='text-3xl md:text-5xl font-bold ' >Full Stack Web Developer</h1>
             <p >I build fast, modern web apps with React, Next.js & Node.js — with 15+ projects deployed on Vercel, Netlify & GitHub.</p>
             
             <div className='space-x-4 flex items-center justify-center'>
-              <a href="#projects" className='cursor-pointer  '><button className='bg-black rounded-full px-4 py-3 text-white flex items-center gap-2'>View My Work<FaLongArrowAltRight /> </button></a>
+              <a href="#projects" className='cursor-pointer  '><button className='bg-black rounded-full px-4 py-3 text-white flex items-center gap-2 text-sm'>View My Work<FaLongArrowAltRight /> </button></a>
 
-              <button className='border rounded-full  px-4 py-3 flex items-center gap-2' >Resume <MdOutlineDownload /></button>
+              <Link  href="https://drive.google.com/file/d/1So85OW5B_1o6QXOtyJGR1b_f__LH5piR/view?usp=sharing" className='border rounded-full cursor-pointer  px-4 py-3 flex items-center gap-2 text-sm' >Resume <MdOutlineDownload /></Link>
+             
             </div>
 
           </div>
