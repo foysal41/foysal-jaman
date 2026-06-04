@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 Foysal Jaman Portfolio
 
-## Getting Started
+A modern and responsive personal portfolio website showcasing my skills, projects, experience, and journey as a Junior Full Stack Web Developer.
 
-First, run the development server:
+## 🔗 Live Website
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Portfolio:** https://foysal-jaman.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📸 Preview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 👨‍💻 About This Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This portfolio website serves as my personal developer hub where recruiters, clients, and fellow developers can explore my projects, technical skills, professional experience, and contact information.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The goal of this portfolio is to present my work in a clean, modern, and user-friendly way while demonstrating my frontend development abilities.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Responsive design for all devices
+* Modern UI with smooth animations
+* Personal introduction section
+* Skills and technology showcase
+* Featured project gallery
+* Professional experience section
+* Contact information and social links
+* Fast loading and optimized performance
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* JavaScript (ES6+)
+* Tailwind CSS
+* Framer Motion
+
+### Deployment
+
+* Vercel
+
+### Tools
+
+* Git
+* GitHub
+* VS Code
+* Figma
+
+---
+
+
+## 👤 Author
+
+**Foysal Jaman**
+
+🌐 Portfolio: https://foysal-jaman.vercel.app/
+
+🐙 GitHub: https://github.com/foysal41
+
+📧 Email: [mdfoysal.mf33@gmail.com](mailto:mdfoysal.mf33@gmail.com)
+
+---
+
+### ⭐ If you like this project, consider giving it a star!
