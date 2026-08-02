@@ -6,9 +6,10 @@ import aboutImage from "@/app/assets/aboutMe.webp"
 
 export default function About() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 items-center justify-center px-4 py-20 gap-8' id='about'>
+    <div  className='grid grid-cols-1 md:grid-cols-2 items-center justify-center px-4 py-20 gap-8' id='about'>
   <div className='z-10'>
     <Image src={aboutImage} alt='about_image' className='rounded-md '></Image>
+    
   </div>
 
   <div className='z-10 space-y-6 '>
@@ -20,7 +21,7 @@ export default function About() {
       <div className='border border-black/20 rounded-md  px-5 py-4 space-y-3'>
         <FaCode size={30}/>
         <h3 className='text-md font-semibold'>Languages & Skills</h3>
-        <p className='text-base text-black/70 uppercase'> HTML, CSS, Tailwind, JavaScript, DSA, React, Next.js, Node.js, Express, MongoDB, Better Auth </p>
+        <p className='text-base text-black/70 uppercase'> HTML, CSS, Tailwind, Typescript, JavaScript, DSA, React, Next.js, Node.js, Express, MongoDB, Better Auth </p>
       </div>
 
   <div className='border border-black/20 rounded-md  px-5 py-4 space-y-3'>

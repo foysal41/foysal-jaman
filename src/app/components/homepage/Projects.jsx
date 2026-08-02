@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import projectOne from "@/app/assets/projectOne.png";
+import projectOne from "@/app/assets/mini-crm-feature-image.jpg";
 import projectTwo from "@/app/assets/skill-sphere-project.png";
 import projectThree from "@/app/assets/keenkeeper-project.png";
 import projectFour from "@/app/assets/docAppointMent-project.png";
 import projectFive from "@/app/assets/digiTools-project.png";
+import projectSix from "@/app/assets/projectOne.png";
 import { IoArrowForward } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
@@ -16,9 +17,9 @@ const projectData = [
     technologies: ["Next.js", "React.Js", "Better Auth"],
     project_Name: "KeenKeeper-Social App",
     description:
-      "KeenKeeper is a modern web application designed to help users maintain meaningful connections with their friends and family.",
-    liveUrl: "https://project1.com",
-    githubUrl: "https://github.com/foysal/project1",
+      "A modern Mini Customer Relationship Management (CRM) System. The application role based authentication system and an intuitive dashboard.",
+    liveUrl: "https://mini-crm-two-pied.vercel.app/",
+    githubUrl: "https://github.com/foysal41/mini-crm",
   },
   {
     id: 2,
@@ -55,6 +56,16 @@ const projectData = [
     description: "Responsive digital marketplace for discovering productivity tools, managing purchases, and enhancing workflow through interactive shopping experiences.",
     liveUrl: "https://b13-a6-digi-tools-platform-ten.vercel.app/",
     githubUrl: "https://github.com/foysal41/B13-A6-DigiTools-Platform",
+  },
+  {
+    id: 6,
+    image: projectSix,
+    technologies: ["Next.js", "React.Js", "Better Auth"],
+    project_Name: "KeenKeeper-Social App",
+    description:
+      "KeenKeeper is a modern web application designed to help users maintain meaningful connections with their friends and family.",
+    liveUrl: "https://project1.com",
+    githubUrl: "https://github.com/foysal/project1",
   },
 ];
 
