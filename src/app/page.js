@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import { DiVim } from "react-icons/di";
 import Hero from "./components/homepage/Hero";
 import About from "./components/homepage/About";
 import Skills from "./components/homepage/Skills";

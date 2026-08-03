@@ -7,6 +7,8 @@ import { MdOutlineDownload } from 'react-icons/md'
 import heroImage from "../../assets/foysal-upgrade.png"
 import Link from 'next/link'
 import { motion } from "motion/react"
+import DownloadFileButton from '../ui/DownloadFileButton'
+
 
 
 export default function Hero() {
@@ -29,7 +31,7 @@ export default function Hero() {
               </Link>
              
 
-              <Link  href="https://drive.google.com/file/d/1So85OW5B_1o6QXOtyJGR1b_f__LH5piR/view?usp=sharing" className='border rounded-full cursor-pointer  px-4 py-3 flex items-center gap-2 text-sm' >Resume <MdOutlineDownload /></Link>
+             <DownloadFileButton title="Download Resume" url="https://drive.google.com/file/d/1So85OW5B_1o6QXOtyJGR1b_f__LH5piR/view?usp=sharing"></DownloadFileButton>
              
             </div>
 
