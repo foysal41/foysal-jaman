@@ -32,7 +32,7 @@ export default function Skills() {
 
     <div className='grid grid-cols-12 gap-4 mt-4 '>
       <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center  z-10'> <FaHtml5 style={{color: "#FD6800"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>HTML5</p></div>
-      <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center ' z-10> <FaCss3Alt style={{color: "#2B7FFF"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>CSS 3</p></div>
+      <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center z-10' > <FaCss3Alt style={{color: "#2B7FFF"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>CSS 3</p></div>
       <div className='border col-span-8 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center  z-10'> <DiJavascript style={{color: "#FD6800"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>JavaScript</p></div>
       <div className='border col-span-4 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center z-10 '> <FaReact style={{color: "#11A9C4"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>React</p></div>
        <div className='border col-span-4 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center  z-10'> <RiNextjsFill style={{color: "#000000"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>Next Js</p></div>
@@ -48,7 +48,7 @@ export default function Skills() {
 
     <div className='grid grid-cols-12 gap-4 mt-4  '>
       <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center  z-10'> <FaNodeJs style={{color: "#271C54"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>Node Js</p></div>
-      <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center ' z-10> <DiMongodb style={{color: "#26A63E"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>MongoDB</p></div>
+      <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center z-10' > <DiMongodb style={{color: "#26A63E"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>MongoDB</p></div>
       <div className='border col-span-8 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center  z-10'> <SiBetterauth style={{color: "#F5830B"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>BetterAuth</p></div>
     
     </div>
@@ -62,7 +62,7 @@ export default function Skills() {
 
     <div className='grid grid-cols-12 gap-4 mt-4 '>
       <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center  z-10'> <FaGitAlt  style={{color: "#FB2C36"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p>Git</p></div>
-      <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center ' z-10> <FaGithub style={{color: "#000000"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p> GitHub</p></div>
+      <div className='border col-span-6 border-black/20 rounded-full py-1 px-2 flex flex-row items-center justify-center z-10' > <FaGithub style={{color: "#000000"}}  className=' px-2 py-2 rounded-lg text-4xl '  /> <p> GitHub</p></div>
      
     </div>
   </div>
