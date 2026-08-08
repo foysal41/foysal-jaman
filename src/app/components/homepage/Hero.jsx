@@ -57,7 +57,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className=" w-full px-4 py-16 md:px-8 lg:px-10 lg:py-50">
+    <section className=" w-full px-4 py-30 md:px-8 lg:px-10 lg:py-50 ">
       <div className="mx-auto grid max-w-325 items-center gap-12 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
@@ -102,7 +102,7 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="w-full min-w-0"
         >
-          <div className="w-full min-w-0 overflow-hidden rounded-[28px] border border-purple-100 bg-white p-5 shadow-[0_20px_70px_rgba(124,58,237,0.12)] md:p-7">
+          <div className="w-full min-w-0 overflow-hidden rounded-[28px] border border-purple-100 bg-white  shadow-[0_20px_70px_rgba(124,58,237,0.12)] md:p-7">
 
             {/* HEADER */}
             <div className="mb-6 flex min-w-0 items-start gap-4">
@@ -129,7 +129,7 @@ export default function Hero() {
 
               {/* AI RESPONSE */}
               <div className="mb-4 min-w-0 rounded-2xl border border-gray-100 bg-gray-50 p-4">
-                <div className="flex min-w-0 gap-3">
+                <div className="flex flex-col md:flex-row min-w-0 gap-3">
 
                   {/* AI ICON */}
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-100">
@@ -218,7 +218,7 @@ export default function Hero() {
               </div>
 
               {/* SUGGESTED QUESTIONS */}
-              <div className="mb-4 min-w-0">
+              <div className="mb-4 min-w-0 px-3">
                 <div className="mb-3 flex items-center gap-2">
                   <HiOutlineSparkles className="shrink-0 text-purple-500" />
 

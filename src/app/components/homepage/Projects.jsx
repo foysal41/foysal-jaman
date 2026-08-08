@@ -71,7 +71,7 @@ const projectData = [
 
 export default function Projects() {
   return (
-    <div className="px-4 " id="projects">
+    <div className="max-w-7xl mx-auto px-3  " id="projects">
       <div className="text-center z-10 mb-10">
         <h2 className="text-5xl">Projects</h2>
         <p className="text-base">View my all projects here.</p>

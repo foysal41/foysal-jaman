@@ -6,9 +6,24 @@ import React, { useState } from "react";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  const menuItems = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "#about",
+    },
+    {
+      title: "Projects",
+      href: "#projects",
+    },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-gray-100 bg-white/95 shadow-[0_2px_10px_rgba(0,0,0,0.06)] backdrop-blur-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 md:px-8">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-gray-100 bg-white/95 shadow-[0_2px_10px_rgba(0,0,0,0.06)] backdrop-blur-sm">
+      <div className="mx-auto flex max-w-325 items-center justify-between px-4 py-5 md:px-8">
 
         {/* LOGO */}
         <Link
@@ -21,32 +36,16 @@ export default function Header() {
 
         {/* DESKTOP NAV */}
         <ul className="hidden items-center gap-8 md:flex">
-          <li>
-            <Link
-              href="/"
-              className="cursor-pointer text-sm transition hover:text-purple-600"
-            >
-              Home
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="#about"
-              className="cursor-pointer text-sm transition hover:text-purple-600"
-            >
-              About
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="#projects"
-              className="cursor-pointer text-sm transition hover:text-purple-600"
-            >
-              Projects
-            </Link>
-          </li>
+          {menuItems.map((item) => (
+            <li key={item.title}>
+              <Link
+                href={item.href}
+                className="cursor-pointer text-lg transition hover:text-purple-600"
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* MOBILE MENU BUTTON */}
@@ -79,36 +78,18 @@ export default function Header() {
       {/* MOBILE NAV */}
       {open && (
         <div className="border-t border-gray-100 px-4 py-4 md:hidden">
-          <ul className="flex flex-col gap-4">
-            <li>
-              <Link
-                href="/"
-                onClick={() => setOpen(false)}
-                className="block py-2 text-sm hover:text-purple-600"
-              >
-                Home
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="#about"
-                onClick={() => setOpen(false)}
-                className="block py-2 text-sm hover:text-purple-600"
-              >
-                About
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="#projects"
-                onClick={() => setOpen(false)}
-                className="block py-2 text-sm hover:text-purple-600"
-              >
-                Projects
-              </Link>
-            </li>
+          <ul className="mx-auto flex max-w-325 flex-col gap-4">
+            {menuItems.map((item) => (
+              <li key={item.title}>
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="block py-2 text-sm hover:text-purple-600"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       )}

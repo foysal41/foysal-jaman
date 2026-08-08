@@ -6,7 +6,7 @@ import aboutImage from "@/app/assets/aboutMe.webp"
 
 export default function About() {
   return (
-    <div  className='grid grid-cols-1 md:grid-cols-2 items-center justify-center px-4 py-20 gap-8' id='about'>
+    <div  className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-center px-3  py-20 gap-8' id='about'>
   <div className='z-10'>
     <Image src={aboutImage} alt='about_image' className='rounded-md '></Image>
     
