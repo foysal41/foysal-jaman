@@ -4,31 +4,21 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { MdBusiness, MdEmail } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import DownloadFileButton from "../ui/DownloadFileButton";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import foysalImage from "@/app/assets/foysal-upgrade.png"
+import Image from "next/image";
 
 export default function Hero() {
-  const [company, setCompany] = useState("");
-  const [email, setEmail] = useState("");
-  const [started, setStarted] = useState(false);
   const [prompt, setPrompt] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleStart = (e) => {
-    e.preventDefault();
-
-    if (!company || !email) return;
-
-    setStarted(true);
-  };
-
-  const handleAsk = async () => {
-    if (!prompt.trim()) return;
+  const handleAsk = async (question = prompt) => {
+    if (!question.trim()) return;
 
     try {
       setLoading(true);
@@ -40,7 +30,7 @@ export default function Hero() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message: prompt,
+          message: question,
         }),
       });
 
@@ -59,9 +49,17 @@ export default function Hero() {
     }
   };
 
+  const suggestedQuestions = [
+    "What are Foysal's core skills?",
+    "Show his full stack projects",
+    "Does he have backend experience?",
+    "Tell me about his experience",
+  ];
+
   return (
     <section className="w-full px-4 py-16 md:px-8 lg:px-10 lg:py-24">
       <div className="mx-auto grid max-w-325 items-center gap-12 lg:grid-cols-2">
+
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -69,7 +67,9 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="text-center lg:text-left"
         >
-          <p className="mb-4 text-lg">Hi! I&apos;m Foysal Jaman</p>
+          <p className="mb-4 text-lg">
+            Hi! I&apos;m Foysal Jaman
+          </p>
 
           <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
             Full Stack Web Developer
@@ -100,18 +100,21 @@ export default function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="w-full"
+          className="w-full min-w-0"
         >
-          <div className="rounded-[28px] border border-purple-100 bg-white p-5 shadow-[0_20px_70px_rgba(124,58,237,0.12)] md:p-7">
+          <div className="w-full min-w-0 overflow-hidden rounded-[28px] border border-purple-100 bg-white p-5 shadow-[0_20px_70px_rgba(124,58,237,0.12)] md:p-7">
+
             {/* HEADER */}
-            <div className="mb-6 flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-purple-100 text-2xl">
-                🤖
+            <div className="mb-6 flex min-w-0 items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-purple-100 text-2xl">
+                
+                <Image src={foysalImage} alt="foysal_jaman_image" height={40} width={40} className="rounded-full"></Image>
               </div>
 
-              <div>
+              <div className="min-w-0">
                 <h2 className="text-xl font-bold md:text-2xl">
-                  Ask Foysal <span className="text-purple-600">AI</span>
+                  Ask Foysal{" "}
+                  <span className="text-purple-600">AI</span>
                 </h2>
 
                 <p className="mt-1 text-sm leading-6 text-gray-500">
@@ -121,118 +124,27 @@ export default function Hero() {
               </div>
             </div>
 
-            {!started ? (
-              <form onSubmit={handleStart}>
-                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
-                  <h3 className="font-semibold">
-                    Let&apos;s get to know you first
-                  </h3>
+            {/* CHAT AREA */}
+            <div className="min-w-0">
 
-                  <p className="mt-1 text-xs text-gray-500">
-                    Please share your company and work email before asking
-                    questions.
-                  </p>
+              {/* AI RESPONSE */}
+              <div className="mb-4 min-w-0 rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                <div className="flex min-w-0 gap-3">
 
-                  {/* COMPANY */}
-                  <div className="mt-5">
-                    <label className="mb-2 block text-xs font-medium text-gray-600">
-                      Company / Organization
-                    </label>
-
-                    <div className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3">
-                      <MdBusiness className="text-xl text-gray-400" />
-
-                      <input
-                        type="text"
-                        value={company}
-                        onChange={(e) => setCompany(e.target.value)}
-                        placeholder="e.g. Google, Microsoft..."
-                        className="w-full bg-transparent text-sm outline-none"
-                        required
-                      />
-                    </div>
+                  {/* AI ICON */}
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-100">
+                    <Image src={foysalImage} alt="foysal_jaman_image" height={40} width={40} className="rounded-full"></Image>
                   </div>
 
-                  {/* EMAIL */}
-                  <div className="mt-4">
-                    <label className="mb-2 block text-xs font-medium text-gray-600">
-                      Work Email
-                    </label>
+                  {/* ANSWER */}
+                  <div className="min-w-0 max-w-full overflow-hidden rounded-2xl rounded-tl-none bg-white px-4 py-3 shadow-sm">
 
-                    <div className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3">
-                      <MdEmail className="text-xl text-gray-400" />
-
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="you@company.com"
-                        className="w-full bg-transparent text-sm outline-none"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  {/* CONTINUE */}
-                  <button
-                    type="submit"
-                    className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-purple-700"
-                  >
-                    Continue to Ask
-                    <FaLongArrowAltRight />
-                  </button>
-                </div>
-
-                {/* SUGGESTED QUESTIONS */}
-                <div className="mt-5">
-                  <div className="mb-3 flex items-center gap-2">
-                    <HiOutlineSparkles className="text-purple-500" />
-
-                    <p className="text-sm font-semibold">Try asking</p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "What are Foysal's core skills?",
-                      "Show his full stack projects",
-                      "Does he have backend experience?",
-                      "Tell me about his experience",
-                    ].map((question) => (
-                      <button
-                        type="button"
-                        key={question}
-                        className="rounded-full border border-gray-200 px-3 py-2 text-xs text-gray-600 transition hover:border-purple-300 hover:bg-purple-50 hover:text-purple-600"
-                      >
-                        {question}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </form>
-            ) : (
-              /* CHAT AREA */
-
-              <div>
-                <div className="mb-4 rounded-2xl bg-gray-50 p-4">
-                  <p className="text-xs text-gray-400">Asking as</p>
-
-                  <p className="mt-1 text-sm font-semibold">{company}</p>
-
-                  <p className="text-xs text-gray-500">{email}</p>
-                </div>
-
-                <div className="mb-4 min-h-45 rounded-2xl border border-gray-100 bg-gray-50 p-4">
-                  <div className="flex gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-100">
-                      🤖
-                    </div>
-
-                    <div className="rounded-2xl rounded-tl-none bg-white px-4 py-3 shadow-sm">
-                      {loading ? (
-                        <p className="text-base leading-7 text-gray-500">
-                          Foysal AI is thinking...
-                        </p>
-                      ) : answer ? (
+                    {loading ? (
+                      <p className="text-base leading-7 text-gray-500">
+                        Foysal AI is thinking...
+                      </p>
+                    ) : answer ? (
+                      <div className="min-w-0 break-words">
                         <ReactMarkdown
                           remarkPlugins={[remarkGfm]}
                           components={{
@@ -241,26 +153,26 @@ export default function Hero() {
                                 href={href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-purple-600 underline hover:text-purple-800"
+                                className="break-all text-purple-600 underline hover:text-purple-800"
                               >
                                 {children}
                               </a>
                             ),
 
                             p: ({ children }) => (
-                              <p className="mb-4 text-base leading-7 text-gray-700">
+                              <p className="mb-4 break-words text-base leading-7 text-gray-700 last:mb-0">
                                 {children}
                               </p>
                             ),
 
                             ul: ({ children }) => (
-                              <ul className="mb-4 list-disc space-y-2 pl-5 text-base leading-7 text-gray-700">
+                              <ul className="mb-4 list-disc space-y-2 overflow-hidden pl-5 text-base leading-7 text-gray-700">
                                 {children}
                               </ul>
                             ),
 
                             ol: ({ children }) => (
-                              <ol className="mb-4 list-decimal space-y-2 pl-5 text-base leading-7 text-gray-700">
+                              <ol className="mb-4 list-decimal space-y-2 overflow-hidden pl-5 text-base leading-7 text-gray-700">
                                 {children}
                               </ol>
                             ),
@@ -272,8 +184,8 @@ export default function Hero() {
                             ),
 
                             table: ({ children }) => (
-                              <div className="mb-4 overflow-x-auto">
-                                <table className="w-full border-collapse text-sm">
+                              <div className="mb-4 w-full max-w-full overflow-x-auto">
+                                <table className="w-full min-w-[500px] border-collapse text-sm">
                                   {children}
                                 </table>
                               </div>
@@ -294,45 +206,75 @@ export default function Hero() {
                         >
                           {answer}
                         </ReactMarkdown>
-                      ) : (
-                        <p className="text-base leading-7 text-gray-700">
-                          Hi! 👋 Ask me anything about Foysal&apos;s experience,
-                          skills, projects or education.
-                        </p>
-                      )}
-                    </div>
+                      </div>
+                    ) : (
+                      <p className="text-base leading-7 text-gray-700">
+                        Hi! 👋 Ask me anything about Foysal&apos;s experience,
+                        skills, projects or education.
+                      </p>
+                    )}
                   </div>
                 </div>
+              </div>
 
-                {/* PROMPT */}
-                <div className="flex items-center gap-2 rounded-2xl border-2 border-purple-200 bg-white p-2">
-                  <input
-                    type="text"
-                    value={prompt}
-                    onChange={(e) => setPrompt(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleAsk();
-                      }
-                    }}
-                    placeholder="Ask anything about Foysal..."
-                    className="w-full bg-transparent px-3 py-2 text-sm outline-none"
-                  />
+              {/* SUGGESTED QUESTIONS */}
+              <div className="mb-4 min-w-0">
+                <div className="mb-3 flex items-center gap-2">
+                  <HiOutlineSparkles className="shrink-0 text-purple-500" />
 
-                  <button
-                    onClick={handleAsk}
-                    type="button"
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white"
-                  >
-                    <FiSend className="text-lg" />
-                  </button>
+                  <p className="text-sm font-semibold">
+                    Try asking
+                  </p>
                 </div>
 
-                <p className="mt-3 text-center text-[11px] text-gray-400">
-                  AI answers are based on Foysal&apos;s portfolio and resume.
-                </p>
+                <div className="flex min-w-0 flex-wrap gap-2">
+                  {suggestedQuestions.map((question) => (
+                    <button
+                      type="button"
+                      key={question}
+                      onClick={() => {
+                        setPrompt(question);
+                        handleAsk(question);
+                      }}
+                      className="max-w-full rounded-full border border-gray-200 px-3 py-2 text-left text-xs text-gray-600 transition hover:border-purple-300 hover:bg-purple-50 hover:text-purple-600"
+                    >
+                      {question}
+                    </button>
+                  ))}
+                </div>
               </div>
-            )}
+
+              {/* PROMPT */}
+              <div className="flex min-w-0 items-center gap-2 rounded-2xl border-2 border-purple-200 bg-white p-2">
+
+                <input
+                  type="text"
+                  value={prompt}
+                  onChange={(e) => setPrompt(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleAsk();
+                    }
+                  }}
+                  placeholder="Ask anything about Foysal..."
+                  className="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm outline-none"
+                />
+
+                <button
+                  onClick={() => handleAsk()}
+                  type="button"
+                  disabled={loading}
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white transition hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <FiSend className="text-lg" />
+                </button>
+              </div>
+
+              <p className="mt-3 text-center text-[11px] text-gray-400">
+                AI answers are based on Foysal&apos;s portfolio and resume.
+              </p>
+
+            </div>
           </div>
         </motion.div>
       </div>
