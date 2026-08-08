@@ -57,7 +57,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="w-full px-4 py-16 md:px-8 lg:px-10 lg:py-24">
+    <section className=" w-full px-4 py-16 md:px-8 lg:px-10 lg:py-50">
       <div className="mx-auto grid max-w-325 items-center gap-12 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
@@ -144,7 +144,7 @@ export default function Hero() {
                         Foysal AI is thinking...
                       </p>
                     ) : answer ? (
-                      <div className="min-w-0 break-words">
+                      <div className="min-w-0 wrap-break-word">
                         <ReactMarkdown
                           remarkPlugins={[remarkGfm]}
                           components={{
@@ -160,7 +160,7 @@ export default function Hero() {
                             ),
 
                             p: ({ children }) => (
-                              <p className="mb-4 break-words text-base leading-7 text-gray-700 last:mb-0">
+                              <p className="mb-4 wrap-break-word text-base leading-7 text-gray-700 last:mb-0">
                                 {children}
                               </p>
                             ),
@@ -185,7 +185,7 @@ export default function Hero() {
 
                             table: ({ children }) => (
                               <div className="mb-4 w-full max-w-full overflow-x-auto">
-                                <table className="w-full min-w-[500px] border-collapse text-sm">
+                                <table className="w-full min-w-125] border-collapse text-sm">
                                   {children}
                                 </table>
                               </div>
