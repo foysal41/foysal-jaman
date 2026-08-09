@@ -39,6 +39,7 @@ const foysalData = {
       "REST API",
       "Better Auth",
       "JWT",
+      "Prisma ORM",
     ],
 
     tools: [
@@ -47,6 +48,7 @@ const foysalData = {
       "Vercel",
       "Netlify",
       "n8n Automation",
+      "CI/CD",
     ],
 
     wordpress: [
