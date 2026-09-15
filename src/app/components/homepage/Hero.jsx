@@ -137,7 +137,7 @@ export default function Hero() {
                   </div>
 
                   {/* ANSWER */}
-                  <div className="min-w-0 max-w-full overflow-hidden rounded-2xl rounded-tl-none bg-white px-4 py-3 shadow-sm">
+                  <div className="min-w-0 max-w-full max-h-80 overflow-y-auto rounded-2xl rounded-tl-none bg-white px-4 py-3 shadow-sm">
 
                     {loading ? (
                       <p className="text-base leading-7 text-gray-500">

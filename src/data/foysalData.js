@@ -106,75 +106,111 @@ const foysalData = {
     },
   ],
 
-  projects: [
-    {
-      name: "SkillSphere",
-      category: "Online Course Platform",
-      description: `
-        Online course platform with authentication, protected routes,
-        profile management, and dynamic course archive system.
-        Implemented secure course access and optimized responsive
-        user experience.
-      `,
-      technologies: [
-        "Next.js",
-        "Tailwind CSS",
-        "MongoDB",
-        "Better Auth",
-        "React Toastify",
-        "Vercel",
-      ],
-      live: "https://b13-a8-skill-sphere-theta.vercel.app/",
-    },
+ projects: [
+  {
+    // ⭐ BEST / FEATURED PROJECT
+    name: "Shopora",
+    category: "AI-Powered Multi-Vendor E-commerce Platform",
 
-    {
-      name: "Doc Appoint",
-      category: "Doctor Appointment Platform",
-      description: `
-        Modern full stack doctor appointment booking platform where users
-        can browse doctors, search by specialty, view dynamic doctor
-        details, and securely book appointments through an
-        authentication-based protected workflow.
+    description: `
+      AI-powered multi-vendor e-commerce platform designed to provide
+      a complete online shopping experience for customers, sellers,
+      and administrators.
 
-        Implemented optimized booking management system with responsive
-        UI and secure backend architecture.
-      `,
-      technologies: [
-        "Next.js 15",
-        "React",
-        "Tailwind CSS",
-        "DaisyUI",
-        "React Icons",
-        "React Toastify",
-        "Express.js",
-        "MongoDB",
-        "JWT",
-        "Better Auth",
-      ],
-      server: "https://docappoint-server-pi.vercel.app/",
-      client:
-        "https://vercel.com/foysal-jamans-projects/docappoint",
-    },
+      The platform covers the complete e-commerce workflow, including
+      product discovery, product management, shopping cart, wishlist,
+      checkout, payment, order management, inventory management,
+      coupons, order tracking, and administration.
 
-    {
-      name: "DigiTools Platform",
-      category: "Digital Productivity Tools Marketplace",
-      description: `
-        Digital productivity tools marketplace where users can explore
-        and manage premium digital tools with interactive cart
-        functionality and responsive interface design.
-      `,
-      technologies: [
-        "React.js",
-        "Tailwind CSS",
-        "DaisyUI",
-        "JavaScript ES6+",
-        "Vite",
-        "React Toastify",
-      ],
-      live: "https://b13-a6-digi-tools-platform-ten.vercel.app/",
-    },
-  ],
+      It also includes AI-powered capabilities to assist sellers with
+      product content generation and help customers with product
+      discovery and shopping assistance.
+    `,
+
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma ORM",
+      "PostgreSQL",
+      "REST API",
+      "AI Integration",
+      "Vercel",
+    ],
+
+    live: "https://shopora-ashen.vercel.app/",
+    server: "https://github.com/foysal41/Shopora-server/",
+    client: "https://github.com/foysal41/Shopora-client/",
+  },
+
+  {
+    name: "SkillSphere",
+    category: "Online Course Platform",
+    description: `
+      Online course platform with authentication, protected routes,
+      profile management, and dynamic course archive system.
+      Implemented secure course access and optimized responsive
+      user experience.
+    `,
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB",
+      "Better Auth",
+      "React Toastify",
+      "Vercel",
+    ],
+    live: "https://b13-a8-skill-sphere-theta.vercel.app/",
+  },
+
+  {
+    name: "Doc Appoint",
+    category: "Doctor Appointment Platform",
+    description: `
+      Modern full stack doctor appointment booking platform where users
+      can browse doctors, search by specialty, view dynamic doctor
+      details, and securely book appointments through an
+      authentication-based protected workflow.
+
+      Implemented optimized booking management system with responsive
+      UI and secure backend architecture.
+    `,
+    technologies: [
+      "Next.js 15",
+      "React",
+      "Tailwind CSS",
+      "DaisyUI",
+      "React Icons",
+      "React Toastify",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Better Auth",
+    ],
+    server: "https://docappoint-server-pi.vercel.app/",
+    client:
+      "https://vercel.com/foysal-jamans-projects/docappoint",
+  },
+
+  {
+    name: "DigiTools Platform",
+    category: "Digital Productivity Tools Marketplace",
+    description: `
+      Digital productivity tools marketplace where users can explore
+      and manage premium digital tools with interactive cart
+      functionality and responsive interface design.
+    `,
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "DaisyUI",
+      "JavaScript ES6+",
+      "Vite",
+      "React Toastify",
+    ],
+    live: "https://b13-a6-digi-tools-platform-ten.vercel.app/",
+  },
+],
 
   education: {
     degree: "Bachelor of Business Administration (BBA)",

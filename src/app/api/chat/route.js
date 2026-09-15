@@ -15,7 +15,7 @@ export async function POST(request) {
         },
 
         body: JSON.stringify({
-          model: "openai/gpt-oss-20b:free",
+          model: "inclusionai/ling-3.0-flash-vl:free",
 
           messages: [
             {
