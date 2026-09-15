@@ -17,7 +17,7 @@ export default function Header() {
     },
     {
       title: "Projects",
-      href: "#projects",
+      href: "/projects",
     },
   ];
 

@@ -111,9 +111,10 @@ export default function Projects() {
       </div>
 
       <div className="flex justify-center mt-5 ">
+       <Link href={"/projects"}>
         <button className="  border inline-auto border-purple-500 px-3 py-2 text-purple-500  rounded-full">
           See All Projects
-        </button>
+        </button></Link>
       </div>
     </div>
   );
