@@ -9,8 +9,8 @@ import ProfessionalTimeline from "./components/ui/ProfessionalTimeline";
 export default function Home() {
 
   return (
-    <div className="container mx-auto">
-        <Hero></Hero>
+    <div className="">
+        <Hero  ></Hero>
         <About></About>
         <Skills></Skills>
         <ProfessionalTimeline></ProfessionalTimeline>

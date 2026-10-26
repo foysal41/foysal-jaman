@@ -3,6 +3,7 @@ import React from 'react'
 import { FaCode } from 'react-icons/fa'
 import { RiSchoolLine } from 'react-icons/ri'
 import aboutImage from "@/app/assets/aboutMe.webp"
+import SectionHeading from '../ui/SectionHeading'
 
 export default function About() {
   return (
@@ -13,9 +14,9 @@ export default function About() {
   </div>
 
   <div className='z-10 space-y-6 '>
-    <h4 className='text-xl '>Introduction</h4>
+    <SectionHeading title={"Introduction"}></SectionHeading>
     <h2 className='text-5xl font-normal'>About Us</h2>
-    <p className="text-base">I am a Full Stack Developer specialized in building high-performance web applications. My journey started with a curiosity for how things work on the internet, which evolved into a career of crafting digital experiences using React, Next.js, and Node.js. I dont just write code; I build solutions that are scalable, accessible, and user-centric. Whether its a pixel-perfect frontend or a robust backend architecture, I focus on quality and performance.</p>
+    <p className="text-base"> As a Full-Stack Developer with hands-on experience in WordPress, React, Next.js, TypeScript, and Node.js. I enjoy building responsive, user-friendly web applications and working across frontend and backend systems. Beyond coding, I actively research software development fundamentals, performance optimization, and modern web technologies to write better, more maintainable code and solve real-world problems.</p>
 
     <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
       <div className='border border-black/20 rounded-md  px-5 py-4 space-y-3'>

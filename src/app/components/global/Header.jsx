@@ -1,11 +1,13 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Menu, Slash, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 
+
 export default function Header() {
   const [open, setOpen] = useState(false)
+
   
   const menuItems = [
     { title: "About", href: "/#about" },
@@ -18,15 +20,15 @@ export default function Header() {
 
 
   return (
-   <header className="fixed inset-x-0 top-0 z-50 px-4 pt-5">
-      <nav className="mx-auto flex min-h-[70px] max-w-7xl items-center justify-between rounded-full border border-gray-200 bg-white px-6 shadow-[0_3px_8px_rgba(0,0,0,0.07)] backdrop-blur-xl sm:px-8">
+   <header className="fixed inset-x-0 top-0 z-50 px-4 pt-2 ">
+      <nav className="mx-auto flex min-h-17 max-w-325  items-center justify-between rounded-full border border-gray-200 bg-white px-6 shadow-[0_3px_8px_rgba(0,0,0,0.07)] backdrop-blur-xl sm:px-8">
         {/* LOGO */}
         <Link
           href="/"
           onClick={() => setOpen(false)}
           className="shrink-0 text-xl font-bold tracking-tight text-neutral-900"
         >
-          FJ<span className="text-emerald-500">.</span>
+        <span className="bg-purple-500 p-1 text-white rounded-[4px] text-md">F/J</span>  Foysal Jaman<span className="text-purple-500 text-2xl ml-1">.</span>
         </Link>
 
         {/* DESKTOP NAV */}

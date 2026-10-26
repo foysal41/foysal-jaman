@@ -15,7 +15,7 @@ export async function POST(request) {
         },
 
         body: JSON.stringify({
-          model: "inclusionai/ling-3.0-flash-vl:free",
+          model: "poolside/laguna-s-2.1:free",
 
           messages: [
             {
