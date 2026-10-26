@@ -1,46 +1,42 @@
 "use client";
 
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
-
+  const [open, setOpen] = useState(false)
+  
   const menuItems = [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "About",
-      href: "#about",
-    },
-    {
-      title: "Projects",
-      href: "/projects",
-    },
+    { title: "About", href: "/#about" },
+    { title: "Experience", href: "/#experience" },
+    { title: "Skills", href: "/#skills" },
+    { title: "Projects", href: "/projects" },
+    { title: "Testimonials", href: "/#testimonials" },
+    { title: "Contact", href: "/#contact" },
   ];
 
-  return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-gray-100 bg-white/95 shadow-[0_2px_10px_rgba(0,0,0,0.06)] backdrop-blur-sm">
-      <div className="mx-auto flex max-w-325 items-center justify-between px-4 md:px-0 py-5 ">
 
+  return (
+   <header className="fixed inset-x-0 top-0 z-50 px-4 pt-5">
+      <nav className="mx-auto flex min-h-[70px] max-w-7xl items-center justify-between rounded-full border border-gray-200 bg-white px-6 shadow-[0_3px_8px_rgba(0,0,0,0.07)] backdrop-blur-xl sm:px-8">
         {/* LOGO */}
         <Link
           href="/"
-          className="text-xl font-bold md:text-2xl"
           onClick={() => setOpen(false)}
+          className="shrink-0 text-xl font-bold tracking-tight text-neutral-900"
         >
-          Foysal Jaman.
+          FJ<span className="text-emerald-500">.</span>
         </Link>
 
         {/* DESKTOP NAV */}
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex xl:gap-7">
           {menuItems.map((item) => (
             <li key={item.title}>
               <Link
                 href={item.href}
-                className="cursor-pointer text-lg transition hover:text-purple-600"
+                onClick={() => setOpen(false)}
+                className="text-[15px] font-medium text-neutral-600 transition-colors hover:text-neutral-950"
               >
                 {item.title}
               </Link>
@@ -51,40 +47,25 @@ export default function Header() {
         {/* MOBILE MENU BUTTON */}
         <button
           type="button"
-          onClick={() => setOpen(!open)}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-gray-200 md:hidden"
-          aria-label="Toggle menu"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          className="flex h-10 w-10 items-center justify-center rounded-full text-neutral-800 transition hover:bg-neutral-100 lg:hidden"
         >
-          <span
-            className={`h-0.5 w-5 bg-black transition ${
-              open ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-
-          <span
-            className={`h-0.5 w-5 bg-black transition ${
-              open ? "opacity-0" : ""
-            }`}
-          />
-
-          <span
-            className={`h-0.5 w-5 bg-black transition ${
-              open ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
+          {open ? <X size={21} /> : <Menu size={21} />}
         </button>
-      </div>
+      </nav>
 
       {/* MOBILE NAV */}
       {open && (
-        <div className="border-t border-gray-100 px-4 py-4 md:hidden">
-          <ul className="mx-auto flex max-w-325 flex-col gap-4">
+        <div className="mx-auto mt-2 max-w-7xl rounded-3xl border border-gray-200 bg-white p-4 shadow-lg lg:hidden">
+          <ul className="flex flex-col gap-1">
             {menuItems.map((item) => (
               <li key={item.title}>
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2 text-sm hover:text-purple-600"
+                  className="block rounded-xl px-4 py-3 text-sm font-medium text-neutral-700 transition hover:bg-gray-100 hover:text-neutral-950"
                 >
                   {item.title}
                 </Link>

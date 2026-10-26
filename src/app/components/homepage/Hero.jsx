@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "motion/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { HiOutlineSparkles } from "react-icons/hi2";
@@ -61,12 +60,7 @@ export default function Hero() {
       <div className="mx-auto grid max-w-325 items-center gap-12 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center lg:text-left"
-        >
+        <div>
           <p className="mb-4 text-lg">
             Hi! I&apos;m Foysal Jaman
           </p>
@@ -93,15 +87,10 @@ export default function Hero() {
               url="https://drive.google.com/file/d/1So85OW5B_1o6QXOtyJGR1b_f__LH5piR/view?usp=sharing"
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* RIGHT SIDE - ASK FOYSAL AI */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          className="w-full min-w-0"
-        >
+        <div>
           <div className="w-full min-w-0 overflow-hidden rounded-[28px] border border-purple-100 bg-white  shadow-[0_20px_70px_rgba(124,58,237,0.12)] md:p-7">
 
             {/* HEADER */}
@@ -276,7 +265,7 @@ export default function Hero() {
 
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
