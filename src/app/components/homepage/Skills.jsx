@@ -12,7 +12,6 @@ import {
   FileText,
   Globe,
   Layers,
-  MapPin,
   Palette,
   Server,
   ShieldCheck,
@@ -81,6 +80,7 @@ function SectionHeading({ title }) {
     <div className="flex items-center gap-4">
       <div className="flex shrink-0 items-center gap-2">
         <span className="h-2 w-2 rounded-full bg-neutral-900 shadow-[0_0_8px_rgba(0,0,0,0.3)]" />
+
         <h2 className="text-lg font-bold tracking-tight text-neutral-900">
           {title}
         </h2>
@@ -123,6 +123,7 @@ function CourseItem({ course, index }) {
 
           <p className="mt-1 text-sm text-neutral-600">
             {course.provider}
+
             {course.badge && (
               <span className="ml-2 rounded-full bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600">
                 {course.badge}
@@ -135,7 +136,7 @@ function CourseItem({ course, index }) {
             {course.period}
           </p>
 
-          <p className="mt-2 text-md lg:text-md leading-relaxed text-neutral-600">
+          <p className="mt-2 text-md leading-relaxed text-neutral-600">
             {course.description}
           </p>
 
@@ -165,9 +166,13 @@ function SkillBadge({ name, icon: Icon }) {
 
 export default function ExperienceSkills() {
   return (
-    <section className="w-full bg-[#f7f7f9] px-4 py-10 sm:px-6 lg:px-8">
+    <section
+      id="skills"
+      style={{ scrollMarginTop: "110px" }}
+      className="w-full scroll-mt-28 bg-[#f7f7f9] px-4 py-10 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-stretch gap-5 lg:grid-cols-2">
-        {/* Left: Courses & certificates */}
+        {/* Left: Courses & Certifications */}
         <div className="rounded-3xl border border-neutral-200 bg-white p-5 sm:p-7">
           <SectionHeading title="Courses & Certifications" />
 
@@ -182,7 +187,7 @@ export default function ExperienceSkills() {
           </div>
         </div>
 
-        {/* Right: Existing skills */}
+        {/* Right: Skills */}
         <div className="rounded-3xl border border-emerald-800/30 bg-white p-5 sm:p-7">
           <SectionHeading title="Skills" />
 
@@ -201,8 +206,6 @@ export default function ExperienceSkills() {
               </div>
             ))}
           </div>
-
-          {/* Add more skill groups here if needed */}
         </div>
       </div>
     </section>

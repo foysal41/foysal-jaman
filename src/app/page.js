@@ -7,6 +7,7 @@ import Skills from "./components/homepage/Skills";
 import ProfessionalTimeline from "./components/homepage/ProfessionalTimeline";
 import Projects from "./components/homepage/Projects";
 import ContactCTA from "./components/homepage/ContactCTA";
+import GitHubContributions from "./components/homepage/GithubContributions";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <About></About>
         <Skills></Skills>
         <ProfessionalTimeline></ProfessionalTimeline>
+        <GitHubContributions></GitHubContributions>
         <Projects></Projects>
         <ContactCTA></ContactCTA>
 

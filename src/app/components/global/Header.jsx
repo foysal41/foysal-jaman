@@ -11,17 +11,16 @@ export default function Header() {
   
   const menuItems = [
     { title: "About", href: "/#about" },
-    { title: "Experience", href: "/#experience" },
     { title: "Skills", href: "/#skills" },
+    { title: "Experience", href: "/#experience" },
     { title: "Projects", href: "/projects" },
-    { title: "Testimonials", href: "/#testimonials" },
     { title: "Contact", href: "/#contact" },
   ];
 
 
   return (
-   <header className="fixed inset-x-0 top-0 z-50 px-4 pt-2 ">
-      <nav className="mx-auto flex min-h-17 max-w-325  items-center justify-between rounded-full border border-gray-200 bg-white px-6 shadow-[0_3px_8px_rgba(0,0,0,0.07)] backdrop-blur-xl sm:px-8">
+   <header className="fixed inset-x-0 top-0 z-50 px-4 pt-2">
+      <nav className="mx-auto flex min-h-17 max-w-325  items-center justify-between rounded-full border border-gray-200 bg-white px-6 shadow-[0_3px_8px_rgba(0,0,0,0.07)] backdrop-blur-xl sm:px-8 ">
         {/* LOGO */}
         <Link
           href="/"
@@ -32,7 +31,7 @@ export default function Header() {
         </Link>
 
         {/* DESKTOP NAV */}
-        <ul className="hidden items-center gap-6 lg:flex xl:gap-7">
+        <ul className="hidden items-center gap-6 lg:flex xl:gap-7 ">
           {menuItems.map((item) => (
             <li key={item.title}>
               <Link

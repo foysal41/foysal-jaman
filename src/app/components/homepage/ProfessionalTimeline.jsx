@@ -51,7 +51,7 @@ const ProfessionalTimeline = () => {
   const [openId, setOpenId] = useState(1);
 
   return (
-    <section className="max-w-325 mx-auto py-16 px-4">
+    <section id="experience" className="max-w-325 mx-auto py-16 px-4 ">
       <div className="pb-5 ">
         <SectionHeading title={"Experience"}></SectionHeading>
         <h2 className="text-5xl">Professional Experience </h2>
@@ -114,7 +114,7 @@ const ProfessionalTimeline = () => {
                       {item.responsibilities.map((text, index) => (
                         <p
                           key={index}
-                          className="text-sm text-gray-600 flex gap-2"
+                          className="text-md  text-gray-600 flex gap-2"
                         >
                           <span>•</span>
                           {text}
