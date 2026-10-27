@@ -50,7 +50,7 @@ const ProfessionalTimeline = () => {
   const [openId, setOpenId] = useState(1);
 
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4">
+    <section className="max-w-325 mx-auto py-16 px-4">
       <div className="text-center z-10 pb-5">
         <h2 className="text-5xl">Professional Experience </h2>
         <p className="text-base">

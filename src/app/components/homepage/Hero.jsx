@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-5">
-            <ul className="space-y-1">
+            <ul className="space-y-1 text-[#717171]">
               <li className="flex items-center gap-2 text-md md:text-lg">
                 <Check
                   size={25}

@@ -1,168 +1,209 @@
+
 "use client";
 
-import React, { useState } from "react";
-
 import {
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaNodeJs,
-  FaGitAlt,
-} from "react-icons/fa";
-import { FaGithub } from "react-icons/fa6";
-import { DiJavascript, DiMongodb } from "react-icons/di";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiBetterauth, SiFigma } from "react-icons/si";
+  Atom,
+  Braces,
+  CalendarDays,
+  Code2,
+  Database,
+  ExternalLink,
+  FileCode,
+  FileText,
+  Globe,
+  Layers,
+  MapPin,
+  Palette,
+  Server,
+  ShieldCheck,
+  Wind,
+} from "lucide-react";
 
-const skills = [
+const courses = [
   {
-    name: "HTML5",
-    icon: <FaHtml5 className="text-[#E34F26]" />,
-    category: "frontend",
+    title: "Complete Web Development Course",
+    provider: "Programming Hero",
+    period: "January – August 2026",
+    badge: "Batch 13",
+    description:
+      "Completed comprehensive training in HTML, CSS, JavaScript, React, Next.js, Node.js, Express.js, MongoDB, and AI-powered development.",
+    certificateId: "1vqiqYhplaIs-_Gq0h0Ut9_TIW6URnAFs",
   },
   {
-    name: "CSS3",
-    icon: <FaCss3Alt className="text-[#1572B6]" />,
-    category: "frontend",
-  },
-  {
-    name: "JavaScript",
-    icon: <DiJavascript className="text-[#F7DF1E]" />,
-    category: "frontend",
-  },
-  {
-    name: "React JS",
-    icon: <FaReact className="text-[#61DAFB]" />,
-    category: "frontend",
-  },
-  {
-    name: "Next JS",
-    icon: <RiNextjsFill className="text-black" />,
-    category: "frontend",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <RiTailwindCssFill className="text-[#06B6D4]" />,
-    category: "frontend",
-  },
-
-  {
-    name: "Node JS",
-    icon: <FaNodeJs className="text-[#339933]" />,
-    category: "backend",
-  },
-  {
-    name: "Express JS",
-    icon: <SiExpress className="text-black" />,
-    category: "backend",
-  },
-  {
-    name: "MongoDB",
-    icon: <DiMongodb className="text-[#47A248]" />,
-    category: "backend",
-  },
-  {
-    name: "Better Auth",
-    icon: <SiBetterauth className="text-[#F97316]" />,
-    category: "backend",
-  },
-
-  {
-    name: "Git",
-    icon: <FaGitAlt className="text-[#F05032]" />,
-    category: "tools",
-  },
-  {
-    name: "GitHub",
-    icon: <FaGithub className="text-black" />,
-    category: "tools",
-  },
-  {
-    name: "Figma",
-    icon: <SiFigma className="text-[#F24E1E]" />,
-    category: "tools",
+    title: "React Essential Training",
+    provider: "LinkedIn Learning",
+    period: "September 29, 2026",
+    description:
+      "Completed training in core React concepts, component-based development, and modern frontend practices.",
+    certificateId: "1JDsAmCIkC7LGe3u3EV_T7g7jHMpQRWNN",
   },
 ];
 
-export default function Skills() {
-  const [activeTab, setActiveTab] = useState("all");
+const skillGroups = [
+  {
+    title: "CORE STACK",
+    skills: [
+      { name: "React.js", icon: Atom },
+      { name: "Next.js", icon: Layers },
+      { name: "TypeScript", icon: FileCode },
+      { name: "JavaScript", icon: Braces },
+      { name: "Node.js", icon: Server },
+      { name: "Express.js", icon: Code2 },
+      { name: "Tailwind CSS", icon: Wind },
+      { name: "HTML5", icon: Globe },
+      { name: "CSS3", icon: Palette },
+      { name: "PostgreSQL", icon: Database },
+      { name: "Prisma ORM", icon: Database },
+      { name: "MongoDB", icon: Database },
+      { name: "REST APIs", icon: Server },
+      { name: "JWT", icon: ShieldCheck },
+      { name: "Git & GitHub", icon: Code2 },
+      { name: "Better Auth", icon: ShieldCheck },
+      { name: "Vercel", icon: Globe },
+      { name: "Netlify", icon: Globe },
+      { name: "ImgBB API", icon: Code2 },
+      { name: "n8n", icon: Layers },
+    ],
+  },
+  {
+    title: "CMS & TOOLS",
+    skills: [
+      { name: "WordPress", icon: Globe },
+      { name: "Elementor", icon: Layers },
+      { name: "Figma", icon: Palette },
+      { name: "Supabase", icon: Database },
+    ],
+  },
+];
 
-  const filteredSkills =
-    activeTab === "all"
-      ? skills
-      : skills.filter((skill) => skill.category === activeTab);
+function SectionHeading({ title }) {
+  return (
+    <div className="flex items-center gap-4">
+      <div className="flex shrink-0 items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-neutral-900 shadow-[0_0_8px_rgba(0,0,0,0.3)]" />
+        <h2 className="text-lg font-bold tracking-tight text-neutral-900">
+          {title}
+        </h2>
+      </div>
+
+      <div
+        aria-hidden="true"
+        className="h-px min-w-0 flex-1 border-t border-dashed border-neutral-300"
+        style={{
+          maskImage:
+            "linear-gradient(to right, black 0%, black 15%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to right, black 0%, black 15%, transparent 100%)",
+        }}
+      />
+    </div>
+  );
+}
+
+function CourseItem({ course, index }) {
+  const viewUrl = `https://drive.google.com/file/d/${course.certificateId}/view`;
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20">
-      {/* Heading */}
-      <div className="text-center z-10 pb-5">
-        <h2 className="text-5xl">My Skills </h2>
-        <p className="text-base">
-          Technologies and tools I use to build modern web applications.
-        </p>
-      </div>
+    <article
+      className={`py-5 ${
+        index !== courses.length - 1
+          ? "border-b border-neutral-200"
+          : ""
+      }`}
+    >
+      <div className="flex items-start gap-3">
+        <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-neutral-200 bg-neutral-50">
+          <FileText size={17} className="text-neutral-600" />
+        </div>
 
-      {/* Tabs */}
-      <div className="flex items-center justify-center mb-12">
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          <button
-            onClick={() => setActiveTab("all")}
-            className={`border rounded-full px-6 py-2 cursor-pointer transition-all duration-300 ${
-              activeTab === "all"
-                ? "bg-black text-white border-black"
-                : "border-black/20 hover:bg-black hover:text-white"
-            }`}
-          >
-            All
-          </button>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-sm font-semibold leading-5 text-neutral-900">
+            {course.title}
+          </h3>
 
-          <button
-            onClick={() => setActiveTab("frontend")}
-            className={`border rounded-full px-6 py-2 cursor-pointer transition-all duration-300 ${
-              activeTab === "frontend"
-                ? "bg-black text-white border-black"
-                : "border-black/20 hover:bg-black hover:text-white"
-            }`}
-          >
-            Frontend
-          </button>
+          <p className="mt-1 text-sm text-neutral-600">
+            {course.provider}
+            {course.badge && (
+              <span className="ml-2 rounded-full bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600">
+                {course.badge}
+              </span>
+            )}
+          </p>
 
-          <button
-            onClick={() => setActiveTab("backend")}
-            className={`border rounded-full px-6 py-2 cursor-pointer transition-all duration-300 ${
-              activeTab === "backend"
-                ? "bg-black text-white border-black"
-                : "border-black/20 hover:bg-black hover:text-white"
-            }`}
-          >
-            Backend
-          </button>
+          <p className="mt-2 flex items-center gap-1.5 font-mono text-xs text-neutral-500">
+            <CalendarDays size={13} />
+            {course.period}
+          </p>
 
-          <button
-            onClick={() => setActiveTab("tools")}
-            className={`border rounded-full px-6 py-2 cursor-pointer transition-all duration-300 ${
-              activeTab === "tools"
-                ? "bg-black text-white border-black"
-                : "border-black/20 hover:bg-black hover:text-white"
-            }`}
+          <p className="mt-2 text-md lg:text-md leading-relaxed text-neutral-600">
+            {course.description}
+          </p>
+
+          <a
+            href={viewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-800 underline decoration-neutral-300 underline-offset-4 transition-colors hover:text-neutral-500"
           >
-            Tools
-          </button>
+            View certificate
+            <ExternalLink size={13} />
+          </a>
         </div>
       </div>
+    </article>
+  );
+}
 
-      {/* Skills */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {filteredSkills.map((skill) => (
-          <div
-            key={skill.name}
-            className="min-h-40 border border-black/15 rounded-2xl flex flex-col items-center justify-center gap-4 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-          >
-            <div className="text-4xl md:text-6xl ">{skill.icon}</div>
+function SkillBadge({ name, icon: Icon }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-2 text-sm text-neutral-800 shadow-sm transition-colors hover:border-neutral-300">
+      <Icon size={14} strokeWidth={1.8} />
+      {name}
+    </span>
+  );
+}
 
-            <h3 className="text-md md:text-xl font-semibold">{skill.name}</h3>
+export default function ExperienceSkills() {
+  return (
+    <section className="w-full bg-[#f7f7f9] px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-stretch gap-5 lg:grid-cols-2">
+        {/* Left: Courses & certificates */}
+        <div className="rounded-3xl border border-neutral-200 bg-white p-5 sm:p-7">
+          <SectionHeading title="Courses & Certifications" />
+
+          <div className="mt-2">
+            {courses.map((course, index) => (
+              <CourseItem
+                key={course.certificateId}
+                course={course}
+                index={index}
+              />
+            ))}
           </div>
-        ))}
+        </div>
+
+        {/* Right: Existing skills */}
+        <div className="rounded-3xl border border-emerald-800/30 bg-white p-5 sm:p-7">
+          <SectionHeading title="Skills" />
+
+          <div className="mt-6 space-y-6">
+            {skillGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className="mb-3 text-xs font-bold tracking-wide text-neutral-800">
+                  {group.title}
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <SkillBadge key={skill.name} {...skill} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Add more skill groups here if needed */}
+        </div>
       </div>
     </section>
   );

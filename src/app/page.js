@@ -4,7 +4,8 @@ import Hero from "./components/homepage/Hero";
 import About from "./components/homepage/About";
 import Skills from "./components/homepage/Skills";
 import Projects from "./components/homepage/Projects";
-import ProfessionalTimeline from "./components/ui/ProfessionalTimeline";
+import ProfessionalTimeline from "./components/homepage/ProfessionalTimeline";
+
 
 export default function Home() {
 

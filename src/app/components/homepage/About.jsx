@@ -14,25 +14,16 @@ export default function About() {
   </div>
 
   <div className='z-10 space-y-6 '>
-    <SectionHeading title={"Introduction"}></SectionHeading>
-    <h2 className='text-5xl font-normal'>About Us</h2>
-    <p className="text-base"> As a Full-Stack Developer with hands-on experience in WordPress, React, Next.js, TypeScript, and Node.js. I enjoy building responsive, user-friendly web applications and working across frontend and backend systems. Beyond coding, I actively research software development fundamentals, performance optimization, and modern web technologies to write better, more maintainable code and solve real-world problems.</p>
+    <SectionHeading title={"About"}></SectionHeading>
+    <h2 className='text-3xl font-normal'>Building modern ideas into ; 
+powerful digital experiences.</h2>
+    <p className=" text-md md:text-lg text-[#717171]"> I’m Foysal Jaman, a Full-Stack Web Developer specializing in React, Next.js, TypeScript, and Node.js. I graduated in 2023 with a BBA in Management and have <strong className='text-black'>3 years of experience</strong> working with WordPress. I’m passionate about coding, problem-solving, and building modern web experiences. <br></br><br></br>
 
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-      <div className='border border-black/20 rounded-md  px-5 py-4 space-y-3'>
-        <FaCode size={30}/>
-        <h3 className='text-md font-semibold'>Languages & Skills</h3>
-        <p className='text-base text-black/70 uppercase'> HTML, CSS, Tailwind, Typescript, JavaScript, DSA, React, Next.js, Node.js, Express, MongoDB, Better Auth </p>
-      </div>
+I build scalable web applications, including e-commerce and learning management platforms, with features like AI-powered product descriptions, marketing captions, lead generation tools, AI shopping assistants, and visual product search.  My goal is to <strong className='text-black'>identify gaps  in existing e-commerce systems </strong> and LMS platforms, then build innovative features that solve real-world problems.<br></br><br></br>
 
-  <div className='border border-black/20 rounded-md  px-5 py-4 space-y-3'>
-        <RiSchoolLine size={30}/>
-        <h3 className='text-md font-semibold'>Education</h3>
-        <p className='text-base text-black/70 uppercase'> Rupsha Collage Khulna - BBA of Management 2019-2024 </p>
-      </div>
+I believe great engineering starts with strong fundamentals. While optimizing our e-commerce project, I identified a countdown timer causing over 1,000 re-renders in the DealsOfTheDay section. I addressed the root cause by separating the component, reducing re-renders from over <strong className='text-black'>1,000 to just 2</strong>. This experience strengthened my approach to debugging. I also explore technical SEO and AI automation using OpenAI APIs, webhooks, and n8n.</p>
 
-      
-    </div>
+    
   </div>
 </div>
   )
