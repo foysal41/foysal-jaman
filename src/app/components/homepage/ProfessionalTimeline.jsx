@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown, Code } from "lucide-react";
+import SectionHeading from "../ui/SectionHeading";
 
 const timelineData = [
   {
@@ -51,11 +52,10 @@ const ProfessionalTimeline = () => {
 
   return (
     <section className="max-w-325 mx-auto py-16 px-4">
-      <div className="text-center z-10 pb-5">
+      <div className="pb-5 ">
+        <SectionHeading title={"Experience"}></SectionHeading>
         <h2 className="text-5xl">Professional Experience </h2>
-        <p className="text-base">
-          My professional journey and work experience.
-        </p>
+       
       </div>
 
       <div>

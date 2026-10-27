@@ -1,7 +1,7 @@
 
 export default function SectionHeading({ title }) {
   return (
-    <div className="mb-8 flex w-full items-center gap-4">
+    <div className="mb-5 flex w-full items-center gap-4">
       {/* Bullet and title */}
       <div className="flex shrink-0 items-center gap-2">
         <span className="h-2 w-2 rounded-full bg-neutral-900 shadow-[0_0_8px_rgba(0,0,0,0.35)]" />
