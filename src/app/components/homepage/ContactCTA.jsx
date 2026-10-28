@@ -32,7 +32,7 @@ export default function ContactCTA() {
         </h2>
 
         {/* Description */}
-        <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-neutral-600 sm:text-base">
+        <p className="mx-auto mt-5 max-w-2xl text-md md:text-lg leading-7 text-neutral-600 sm:text-base">
           Have a project in mind or an opportunity to discuss? I build modern,
           user-focused web applications and would love to hear what you’re
           working on.

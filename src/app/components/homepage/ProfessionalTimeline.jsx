@@ -114,7 +114,7 @@ const ProfessionalTimeline = () => {
                       {item.responsibilities.map((text, index) => (
                         <p
                           key={index}
-                          className="text-md  text-gray-600 flex gap-2"
+                          className="text-md md:text-lg text-gray-600 flex gap-2"
                         >
                           <span>•</span>
                           {text}

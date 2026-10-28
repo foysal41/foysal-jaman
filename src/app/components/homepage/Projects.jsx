@@ -191,7 +191,7 @@ function ProjectItem({ project, index }) {
           {project.name}
         </h3>
 
-        <p className="mt-4 max-w-lg text-sm leading-7 text-neutral-600 sm:text-base">
+        <p className="mt-4 max-w-lg text-md md:text-lg leading-7 text-neutral-600 sm:text-base">
           {project.description}
         </p>
 
@@ -268,7 +268,7 @@ export default function Projects() {
         <SectionHeading title={"Selected work"}></SectionHeading>
 
         <div className="">
-          <h2 className=" text-2xl md:text-4xl"> Projects </h2>
+          <h2 className=" text-2xl md:text-4xl"> Featured Projects </h2>
         </div>
 
         {/* Alternating project showcase */}
