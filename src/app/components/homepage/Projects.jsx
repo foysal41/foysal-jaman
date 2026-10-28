@@ -268,7 +268,7 @@ export default function Projects() {
         <SectionHeading title={"Selected work"}></SectionHeading>
 
         <div className="">
-          <h2 className=" text-2xl md:text-4xl">Professional Experience </h2>
+          <h2 className=" text-2xl md:text-4xl"> Projects </h2>
         </div>
 
         {/* Alternating project showcase */}
