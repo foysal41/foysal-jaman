@@ -54,7 +54,7 @@ const ProfessionalTimeline = () => {
     <section id="experience" className="max-w-325 mx-auto py-16 px-4 ">
       <div className="pb-5 ">
         <SectionHeading title={"Experience"}></SectionHeading>
-        <h2 className="text-3xl  md:text-5xl">Professional Experience </h2>
+        <h2 className="text-2xl  md:text-5xl">Professional Experience </h2>
        
       </div>
 

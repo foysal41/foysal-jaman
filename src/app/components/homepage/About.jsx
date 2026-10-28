@@ -15,7 +15,7 @@ export default function About() {
 
   <div className='z-10 space-y-6 '>
     <SectionHeading title={"About"}></SectionHeading>
-    <h2 className='text-3xl md:text-4xl font-normal'>Building modern ideas into ; 
+    <h2 className='text-2xl md:text-4xl font-normal'>Building modern ideas into ; 
 powerful digital experiences.</h2>
     <p className=" text-md md:text-lg text-[#717171]"> I’m Foysal Jaman, a Full-Stack Web Developer specializing in React, Next.js, TypeScript, and Node.js. I graduated in 2023 with a BBA in Management and have <strong className='text-black'>3 years of experience</strong> working with WordPress. I’m passionate about coding, problem-solving, and building modern web experiences. <br></br><br></br>
 
