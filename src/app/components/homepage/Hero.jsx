@@ -66,7 +66,7 @@ export default function Hero() {
 
             <DownloadFileButton
               title="Download Resume"
-              url="https://drive.google.com/file/d/1So85OW5B_1o6QXOtyJGR1b_f__LH5piR/view?usp=sharing"
+              url="https://drive.google.com/file/d/17lcAP1ND41ljPSinyz2lnTSBpVfoXsPa/view?usp=sharing"
             />
           </div>
         </div>
