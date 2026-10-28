@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="bg-white/70 ">
           <p className="mb-4 text-lg">Hi! It&apos;s Me Foysal Jaman</p>
 
-          <h1 className="text-4xl font-bold leading-tight md:text-5xl flex">
+          <h1 className="text-3xl font-bold leading-tight md:text-5xl flex">
             <div className="flex items-center bg-purple-500 text-white">
               <ChevronLeft size={30} ></ChevronLeft><span >Full Stack</span><ChevronRight size={30}></ChevronRight>             
             </div> 
